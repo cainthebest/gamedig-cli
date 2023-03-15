@@ -4,17 +4,27 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "README.md"
+      - "LICENSE"
+      - ".gitingore"
+      - ".github/**"
 
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - "README.md"
+      - "LICENSE"
+      - ".gitingore"
+      - ".github/**"
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
-    name: build ${{ matrix.target }}
+  check:
+    name: Check
 
     strategy:
       matrix:
@@ -36,8 +46,7 @@ jobs:
       - name: Cache
         uses: Swatinem/rust-cache@v2
         with:
-            prefix-key: ${{ runner.os }}
-            
+          prefix-key: ${{ runner.os }}
 
       - name: Build
         uses: actions-rs/cargo@v1
