@@ -35,6 +35,9 @@ jobs:
 
       - name: Cache
         uses: Swatinem/rust-cache@v2
+        with:
+            prefix-key: ${{ runner.os }}
+            
 
       - name: Build
         uses: actions-rs/cargo@v1
