@@ -3,7 +3,7 @@ name = "gamedig-cli"
 authors = ["cainthebest"]
 description = "A command line interface for gamedig"
 license = "MIT"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -14,3 +14,9 @@ gamedig = "0.2.1"
 strum = "0.24.1"
 strum_macros = "0.24.3"
 thiserror = "1.0.39"
+
+[profile.release]
+opt-level = 3
+debug = false
+rpath = true
+lto = true
