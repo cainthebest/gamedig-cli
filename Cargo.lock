@@ -15,6 +15,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "487f1e0fcbe47deb8b0574e646def1c903389d95241dd1bbcc6ce4a715dfc0c1"
 
 [[package]]
+name = "byteorder"
+version = "1.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
+
+[[package]]
 name = "bzip2-rs"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -105,10 +111,11 @@ dependencies = [
 
 [[package]]
 name = "gamedig"
-version = "0.2.1"
+version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23d12ee327c59bbe154376fb8c00c13a18d81606d1562d271fe1ec2d7d37ced0"
+checksum = "db9220de67154a6e385fecfa1d2e1b115bbc9d2aadc3a74bc82f1589b8b32e2f"
 dependencies = [
+ "byteorder",
  "bzip2-rs",
  "crc32fast",
  "serde_json",

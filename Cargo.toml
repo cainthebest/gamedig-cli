@@ -10,7 +10,7 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.1.11", features = ["derive"] }
-gamedig = "0.2.1"
+gamedig = "0.2.3"
 strum = "0.24.1"
 strum_macros = "0.24.3"
 thiserror = "1.0.40"
